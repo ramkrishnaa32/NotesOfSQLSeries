@@ -15,7 +15,6 @@ total orders each customer has placed
 
 I want to find out premium customers (who places more orders)
 
-
 average number of numbers placed by each customer
 
 Solution 1 (subquery)
@@ -23,7 +22,6 @@ Solution 1 (subquery)
 
 select avg(total_orders_per_customer) as avg_orders_per_customer from (
 select order_customer_id, count(*) as total_orders_per_customer from orders group by order_customer_id) x
-
 
 Solution 2 (CTE/WITH CLAUSE)
 ============================
